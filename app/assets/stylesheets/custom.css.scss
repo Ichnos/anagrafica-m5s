@@ -1,0 +1,69 @@
+$navbar-default-bg: #B8BABA;
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #EBEB57;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background: #fff;
+  background-image: asset-url('cover_home_chicca.png');
+  background-size: cover;
+  height: 550px;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #EBEB57;
+  font-weight: bold;
+}
+
+.btn-xlarge {
+  text-align: center;
+  text-transform: uppercase;
+  color: #EBEB57;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+  text-decoration: none;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer li {
+  float: left;
+}
