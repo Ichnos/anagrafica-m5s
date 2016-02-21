@@ -1,8 +1,12 @@
 $navbar-default-bg: #B8BABA;
 
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#align {
+  width: 90%;
+  padding: 30px;
+}
 
 #logo {
   float: left;
@@ -33,14 +37,27 @@ $navbar-default-bg: #B8BABA;
   text-align: center;
   text-transform: uppercase;
   color: #EBEB57;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
   font-weight: bold;
 }
 
 .btn-xlarge {
+  font-size: 1.7em;
   text-align: center;
+  background-color: #09607D;
   text-transform: uppercase;
   color: #EBEB57;
   font-weight: bold;
+}
+
+.article-actions {
+  border-top: 1px solid #c3c3c3;
+  padding-top: 5px;
+}
+
+.description {
+  margin-top: 0;
 }
 
 footer {
@@ -63,8 +80,12 @@ footer ul {
   float: right;
 }
 
-footer li {
-  float: left;
+footer ul li {
+float: left;
+margin-left: 15px;
 }
+
+
+
 
 
