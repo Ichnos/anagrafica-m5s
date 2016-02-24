@@ -45,20 +45,18 @@ class ArticlesController < ApplicationController
   end
   
   private
-    def set_article
-      @article = Article.find(params[:id])
-    end
+  def set_article
+    @article = Article.find(params[:id])
+  end
     
-    def article_params
-      params.require(:article).permit(:title, :description)
-    end
+  def article_params
+    params.require(:article).permit(:title, :description)
+  end
     
-    def require_same_user
+  def require_same_user
     if current_user != @article.user
       flash[:danger] = "You can edit or delete your own profile"
       redirect_to root_path
-
     end
   end
-  
 end
