@@ -37,10 +37,6 @@ class UsersController < ApplicationController
     @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
   end
   
-  def set_user
-    @user = User.find(params[:id])
-  end
-  
   private
   def user_params
     params.require(:user).permit(:username, :email, :password)
