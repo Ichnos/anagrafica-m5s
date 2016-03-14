@@ -19,19 +19,19 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = current_user
     if @article.save
-      flash[:success] = "Article was successfully created"
+      flash[:success] = "L'articolo é stato creato con successo"
       redirect_to article_path(@article)
     else
-      render 'new'
+      render 'nuovo'
     end
   end
   
   def update
     if @article.update(article_params)
-      flash[:success] = "Article was successfully updated"
+      flash[:success] = "L'articolo é stato aggiornato con successo"
         redirect_to article_path(@article)
     else
-      render 'edit'
+      render 'modifica'
     end
   end
   
@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    flash[:danger] = "Article was successfully deleted"
+    flash[:danger] = "L'articolo é stato cancellato con successo"
     redirect_to articles_path
   end
   
@@ -55,7 +55,7 @@ class ArticlesController < ApplicationController
   
   def require_same_user
     if current_user != @article.user and !current_user.admin?
-      flash[:danger] = "You can only edit or delete your own articles"
+      flash[:danger] = "Puoi modificare solo i tuoi articoli"
       redirect_to root_path
     end
   end

@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
   def create
    @category = Category.new(category_params)
    if @category.save
-    flash[:success] = "Category was created successfully"
+    flash[:success] = "La categoria é stata creata con successo."
     redirect_to categories_path
    else
     render 'new'
@@ -34,7 +34,7 @@ class CategoriesController < ApplicationController
   
   def require_admin
    if !logged_in? || (logged_in? and !current_user.admin?)
-    flash[:danger] ="Only admin can perform that action"
+    flash[:danger] ="Solo l'amministratore può compire questa azione"
     redirect_to categories_path
    end
   end

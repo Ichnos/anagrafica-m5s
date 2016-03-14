@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Activists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Email</th>
+      <th>Birth city</th>
+      <th>Birth date</th>
+      <th>Whatsapp</th>
+      <th>Facebook</th>
+      <th>Skype</th>
+      <th>Google plus</th>
+      <th>Twitter</th>
+      <th>Mov five star</th>
+      <th>Meet up</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activists.each do |activist| %>
+      <tr>
+        <td><%= activist.username %></td>
+        <td><%= activist.name %></td>
+        <td><%= activist.surname %></td>
+        <td><%= activist.email %></td>
+        <td><%= activist.birth_city %></td>
+        <td><%= activist.birth_date %></td>
+        <td><%= activist.whatsApp %></td>
+        <td><%= activist.facebook %></td>
+        <td><%= activist.skype %></td>
+        <td><%= activist.google_plus %></td>
+        <td><%= activist.twitter %></td>
+        <td><%= activist.mov_five_star %></td>
+        <td><%= activist.meet_up %></td>
+        <td><%= link_to 'Show', activist %></td>
+        <td><%= link_to 'Edit', edit_activist_path(activist) %></td>
+        <td><%= link_to 'Destroy', activist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activist', new_activist_path %>

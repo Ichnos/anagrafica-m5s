@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307192325) do
+ActiveRecord::Schema.define(version: 20160314185102) do
+
+  create_table "activists", force: :cascade do |t|
+    t.string   "username"
+    t.string   "name"
+    t.string   "surname"
+    t.string   "email"
+    t.string   "birth_city"
+    t.boolean  "whatsApp"
+    t.boolean  "facebook"
+    t.boolean  "skype"
+    t.boolean  "google_plus"
+    t.boolean  "twitter"
+    t.boolean  "mov_five_star"
+    t.boolean  "meet_up"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.date     "birth_date"
+  end
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
