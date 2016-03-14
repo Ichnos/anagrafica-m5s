@@ -28,16 +28,17 @@ $navbar-default-bg: #B8BABA;
 
 .jumbotron {
   background: #fff;
-  background-image: asset-url('cover_home_chicca.png');
+  background-image: asset-url('cover_image.png');
   background-size: cover;
-  height: 550px;
+  height: 530px;
 }
 
 .jumbotron h1 {
   text-align: center;
   text-transform: uppercase;
-  color: #EBEB57;
+  color: #2C2D2E;
   margin-bottom: 30px;
+  font-size: 2.2em;
   letter-spacing: -1px;
   font-weight: bold;
 }
