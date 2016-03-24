@@ -1,23 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Activists</h1>
+<h1>Lista attivisti</h1>
 
 <table>
   <thead>
     <tr>
       <th>Username</th>
-      <th>Name</th>
-      <th>Surname</th>
+      <th>Nome</th>
+      <th>Cognome</th>
       <th>Email</th>
-      <th>Birth city</th>
-      <th>Birth date</th>
-      <th>Whatsapp</th>
+      <th>Città di nascita</th>
+      <th>Giorno di nascita</th>
+      <th>Whats App</th>
       <th>Facebook</th>
       <th>Skype</th>
-      <th>Google plus</th>
+      <th>Google Plus</th>
       <th>Twitter</th>
-      <th>Mov five star</th>
-      <th>Meet up</th>
+      <th>Blog M5S</th>
+      <th>Meet up M5S</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -38,9 +38,9 @@
         <td><%= activist.twitter %></td>
         <td><%= activist.mov_five_star %></td>
         <td><%= activist.meet_up %></td>
-        <td><%= link_to 'Show', activist %></td>
-        <td><%= link_to 'Edit', edit_activist_path(activist) %></td>
-        <td><%= link_to 'Destroy', activist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostra', activist %></td>
+        <td><%= link_to 'Aggiorna', edit_activist_path(activist) %></td>
+        <td><%= link_to 'Elimina', activist, method: :delete, data: { confirm: 'Sei sicuro?' } %></td>
       </tr>
     <% end %>
   </tbody>

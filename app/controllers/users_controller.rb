@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       flash[:success] = "Benvenuto in anagrafica M5S #{@user.username}"
       redirect_to user_path(@user)
     else
-      render 'nuovo'
+      render 'new'
     end
   end
   
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       flash[:success] = "Il tuo account è stato aggiornato con successo"
       redirect_to articles_path
     else
-      render 'modifica'
+      render 'edit'
     end
   end
   

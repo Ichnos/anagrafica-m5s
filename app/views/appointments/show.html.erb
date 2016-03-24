@@ -1,0 +1,14 @@
+<h2 align="center"><%= @appointment.title %></h2>
+
+<p>
+  <strong>Creato il:</strong>
+  <%= @appointment.created_at %>
+</p>
+
+<p>
+  <strong>Aggiornato il:</strong>
+  <%= @appointment.updated_at %>
+</p>
+
+<%= link_to 'Aggiorna', edit_appointment_path(@appointment) %> |
+<%= link_to 'Indietro', appointments_path %>
