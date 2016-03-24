@@ -1,0 +1,28 @@
+<% obj.each do |appointment| %>
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <div class="well well-lg">
+      <div class="article-title">
+        <%= link_to appointment.title, appointment_path(appointment) %>
+      </div>
+      <div class="article-body">
+        <div class="article-meta-details">
+          <small>
+            created by: <%= appointment.user.username %>,
+            <%= time_ago_in_words(appointment.created_at) %> ago,
+            last updated <% time_ago_in_words(appointment.updated_at) %>
+          </small>
+        </div> 
+      </div>
+      <% if logged_in? && (current_user == appointment.user || current_user.admin?) %>
+        <div class="article-actions">
+          <%= link_to "Aggiorna questo evento", edit_article_path(appointment), class: "btn btn-xs btn-primary" %>
+          <%= link_to "Elimina questo evento", article_path(appointment), method: :delete,
+          data: { confirm: "Sei sicuro di voler eliminare l'evento?"},
+          class: "btn btn-xs btn-danger" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>

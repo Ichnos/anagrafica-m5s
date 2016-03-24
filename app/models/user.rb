@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+has_many :appointments, dependent: :destroy
+#has_many :appointmentCategories
 has_many :articles, dependent: :destroy
 has_many :articleCategories
 before_save { self.email = email.downcase }
